@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D WEB PROJECT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Cookie&family=Lobster+Two:ital@0;1&family=Noticia+Text&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<div class="h-scroll" id="h-scroll">
+    <div class="logo" width="5" height="5">
+        <img id="logo" src="images/mark.svg"></div>
+   <div>
+        <nav>
+        <a href="#home" class="selected">
+            <span class="material-symbols-outlined">
+            cottage
+            </span></a>
+        <a href="#one"><span class="material-symbols-outlined">
+            cruelty_free
+            </span></a>
+        <a href="#two"><span class="material-symbols-outlined">
+            local_cafe
+            </span></a>
+        <a href="#three"><span class="material-symbols-outlined">
+            spa
+            </span></a>
+        <a href="#four"><span class="material-symbols-outlined">
+            favorite
+            </span></a>
+        <a href="#form">   
+            <span class="material-symbols-outlined">
+                mail
+                </span></a>
+      </nav>
+    </div>
+<!----------- home--------------->
+        <section class="home" id="home">
+
+
+            <div class="word"><h1>Alice's Adventures <br> in Wonderland</h1>
+                <div class="bg" >
+                    <img class="one" src="images/home1-06.svg">
+                    <img class="two" src="images/home2-06.svg">
+                    <img class="three" src="images/home3-06.svg">
+            
+                </div>
+            </div>
+        
+        </section>
+<!-----------section one--------------->
+
+        <section class="rabbithole" id="one">
+            <div class="tag">
+                <img src="images/onetag.svg" width="200" alt="">
+            </div>
+            <div class="background">
+                
+                <div class="popup" onclick="keyFunction()">
+                    <img id="key" src="images/key.svg" width="50">
+                    <span class="popuptext" id="keypop">i wonder where this leads</span>
+                </div>
+
+        <div class="alicepopup" >
+                
+            <canvas id="alicefalling" width="665" height="550"onclick="aliceFunction()"></canvas>
+            <script src="https://unpkg.com/@rive-app/canvas"></script>
+            <script> 
+                let alicefalling = new rive.Rive( {
+                src: '../images/alicefalling.riv',
+                canvas: document.querySelector('#alicefalling'),
+                autoplay: true
+                } );
+            </script>
+                    <span class="alicepopuptext" id="alicepop">“ I wonder how many miles
+                        I've fallen by this time ?”</span>
+                </div>    
+            </div>
+                
+                <div class="jarpopup" >
+                    <img id="jar" src="images/jar.svg" width="200"onclick="jarFunction()">
+                    <span class="jarpopuptext" id="jarpop">it's empty!</span>
+                </div>
+        
+        <div class="botpopup" >
+            
+            <div class="bottle">    
+                <canvas id="bottle" width="350" height="350"onclick="botFunction()"></canvas>
+                <script src="https://unpkg.com/@rive-app/canvas"></script>
+                    <script> 
+                        let bottle = new rive.Rive( {
+                        src: '../images/bottle.riv',
+                        canvas: document.querySelector('#bottle'),
+                        autoplay: true
+                        } );
+                    </script>
+                <span class="botpopuptext" id="botpop">it's not poison...</span>
+            </div>
+
+        </div>
+        
+    </section>
+<!-----------section two--------------->
+        <section class="teaparty" id="two">
+            <div class="tag">
+                <img src="images/twotag.svg" width="200" alt="">
+            </div>
+            <div class="containerparty">
+        <div class="teapartyscene">    
+            <canvas id="teaparty" width="1200" height="700"></canvas>
+            <script src="https://unpkg.com/@rive-app/canvas"></script>
+                <script> 
+                    let teaparty = new rive.Rive( {
+                    src: '../images/teaparty.riv',
+                    canvas: document.querySelector('#teaparty'),
+                    animations:['nodding', 'mouse'],
+                    autoplay: true
+                    } );
+                </script> 
+            </div></div>
+        <button id="bowtie" onclick="bowspinFunction()"> </button>
+        <button id="hat" onclick="hatFunction()"> </button>
+        <button id="teapot" onclick="teapotFunction()"> </button>
+        <div class="ground"></div>
+        </section>
+<!-----------section three--------------->
+        <section class="caterpillar" id="three">
+            <div class="tag">
+                <img src="images/threetag.svg" width="200">
+            </div>
+        <div class="caterpopup" onclick="caterFunction()">
+                <img id="caterpillar" src="images/caterpillar.svg" width="300" > 
+                <span class="caterpopuptext" id="caterpop">one side will make you grow taller,
+                    and the other side will make you grow shorter</span>
+        </div>
+        <div id="hookah"onclick="caterFunction()">
+            <img src="images/hookah.svg" width="400">
+        </div>
+        <div class="mushroom">
+            <img id="bigshroom" src="images/bigshroom.svg" width="600" >
+            <img id="smallshroom" src="images/smallshroom.svg" width="300">
+        </div>
+        <img id="aliceback" src="images/aliceback.svg" width="250" alt="">
+
+        </section>
+<!-----------section four--------------->
+ <section class="queen" id="four">
+    <div class="tag">
+        <img src="images/fourtag.svg" width="250">
+    </div>
+<canvas id="bushone" width="700" height="700" ></canvas>
+            <script src="https://unpkg.com/@rive-app/canvas"></script>
+                    <script> 
+                        let bushone = new rive.Rive( {
+                        src: '../images/bushone.riv',
+                        canvas: document.querySelector('#bushone'),
+                        } );
+            </script>
+
+<canvas id="bushtwo" width="300" height="500" ></canvas>
+
+                    <script> 
+                        let bushtwo = new rive.Rive( {
+                        src: '../images/bushtwo.riv',
+                        canvas: document.querySelector('#bushtwo'),
+                        } );
+            </script>
+<button id="rose1" onclick="rose1Function()"> </button>
+<button id="rose2" onclick="rose2Function()"> </button>
+<button id="rose3" onclick="rose3Function()"> </button>
+
+
+<button id="rose4" onclick="rose4Function(),queenFunction()"> </button>
+<button id="rose5" onclick="rose5Function()"> </button>
+<button id="rose6" onclick="rose6Function()"> </button>
+
+<div class="alicequeenpopup">
+<canvas id="alicequeen" width="300" height="700"onclick="aliceqFunction()"  ></canvas>
+<script src="https://unpkg.com/@rive-app/canvas"></script>
+                    <script> 
+                        let alicequeen = new rive.Rive( {
+                        src: '../images/alicequeen.riv',
+                        canvas: document.querySelector('#alicequeen'),
+                        animations:['alice', 'flamingo', 'hedgehog'],
+                        autoplay:true
+                        } );
+            </script>
+            
+ <span class="aliceqpopuptext" id="aliceqpop">be careful with the queen's roses...</span>
+            </div>
+ 
+<canvas id="queen" width="500" height="700"></canvas>
+<script src="https://unpkg.com/@rive-app/canvas"></script>
+                    <script> 
+                        let queen = new rive.Rive( {
+                        src: '../images/queen.riv',
+                        canvas: document.querySelector('#queen')
+                        } );
+            </script>
+            
+<div class="qground"></div>
+ </section>
+<!-----------form--------------->
+<section id="form">
+    <div class="tagfive">
+        <img src="images/fivetag.svg" width="250">
+    </div>
+
+    <div class="catbox">
+    <canvas id="cat" width="700" height="700" ></canvas>
+    <script src="https://unpkg.com/@rive-app/canvas"></script>
+            <script> 
+                let cat = new rive.Rive( {
+                src: '../images/cat.riv',
+                canvas: document.querySelector('#cat'),
+                autoplay:true
+                } );
+    </script>
+    </div>
+    <div class="container-block">
+       
+
+        <form onsubmit="event.preventDefault(); alert('Thanks for submitting!')">
+  
+          <div class="inputs">
+            <div class="mab-2">
+              <label>Name</label>
+              <input placeholder="Garry Smith" required></input>
+            </div>
+            
+            <div class="may-2">
+              <label>Email</label>
+              <input placeholder="coolguy@gmail.com" required></input>
+            </div>
+            
+            <div class="may-2">
+              <label>State</label>
+              <select placeholder="Select" required>
+                <option>New South Wales</option>
+                <option>Victoria</option>
+                <option>Queensland</option>
+                <option>South Australia</option>
+                <option>Western Australia</option>
+                <option>Tasmania</option>
+                <option>Northen Territory</option>
+                <option>Australian Capital Territory</option>
+              </select>
+            </div>
+            
+            <div class="mat-2">
+              <label>Message</label>
+              <textarea placeholder="Hey, I love the website!" required></textarea>
+            </div>
+          </div>
+          
+          <div class="submission">
+            <input type="submit"></input>
+          </div>
+        </form>
+      </div>
+    
+    </div>
+
+    </section>
+<script src="js/jquery-3.6.1.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
